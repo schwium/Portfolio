@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <link rel="stylesheet" href="style.css">
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+   </head>
+   <body style="overflow:scroll">
+      <div class="btn">
+         <span class="fas fa-caret-down"></span>
+      </div>
+      <nav class="sidebar">
+         <div class="text">
+         </div>
+
+         <ul>
+            <li><a href="#">Brandon Witten<hr style="background-color:red;height:5px;margin-top:5px;border-width: 0px;"> <font size="3" style:"top: 150%;">Artist/Programmer</font></a></li>
+            <li>
+               <a href="#" class="feat-btn">Programming
+               <span class="fas fa-caret-down first"></span>
+               </a>
+               <ul class="feat-show">
+                  <li><a href="bsort.html">Bogo Sort</a></li>
+               </ul>
+               <li><a href="#" class="zero-btn">Art
+               <span class="fas fa-caret-down seconed"></span>
+               </a>
+               <ul class="serv-show">
+                  <li><a href="p1.html">Illustration</a></li>
+               </ul>
+             </li>
+         </ul>
+      </nav>
+
+      <script>
+
+         $('.btn').click(function(){
+           $(this).toggleClass("click");
+           $('.sidebar').toggleClass("show");
+           $(this).toggleClass("rotate");
+         });
+           $('.feat-btn').click(function(){
+             $('nav ul .feat-show').toggleClass("show");
+             $('nav ul .first').toggleClass("rotate");
+           });
+           $('.zero-btn').click(function(){
+             $('nav ul .serv-show').toggleClass("show1");
+             $('nav ul .seconed').toggleClass("rotate");
+           });
+           $('nav ul li').click(function(){
+             $(this).addClass("active").siblings().removeClass("active");
+           });
+      </script>
+
+   <div class="content">
+      <div class="header">
+          Brandon Witten
+      </div>
+      <p>
+          Art and Programming Portfolio
+      </p>
+      <hr style="background-color:red;height:5px;margin-top:5px;border-width: 0px">
+  <i>
+ <font size="5">Game Dev</font>
+</i>
+  </div>
+
+  </body>
+
+</html>
