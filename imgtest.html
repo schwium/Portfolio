@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+   <meta charset="utf-8">
+   <title></title>
+   <link rel="stylesheet" href="style.css">
+   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+   <div class="btn">
+      <span class="fas fa-caret-down"></span>
+   </div>
+   <nav class="sidebar">
+      <div class="text">
+      </div>
+      <ul>
+         <li class="active"><a href="#">Project Log</a></li>
+         <li><a href="index.html">HomePage</a></li>
+      </ul>
+   </nav>
+   <script>
+      $('.btn').click(function(){
+        $(this).toggleClass("click");
+        $('.sidebar').toggleClass("show");
+        $(this).toggleClass("rotate");
+      });
+
+        $('nav ul li').click(function(){
+          $(this).addClass("active").siblings().removeClass("active");
+        });
+   </script>
+</body>
+<script type="text/javascript">
+var index=0;
+function nextimage() {
+    [].forEach.call(document.images,function (v,i) { document.images[i].hidden = i!==index});
+          index = (index+1) % document.images.length;
+}
+document.addEventListener("click", function(event) {
+    nextimage();
+});
+</script>
+
+  <div class="content">
+      <img src="assets/1.jpg" style="width: auto;height:100vh;"  />
+      <img src="assets/2.jpg" style="width: auto;height:100vh;"  visibility: hidden/>
+      <img src="assets/3.jpg" style="width: auto;height:100vh;" visibility: hidden/>
+      <img src="assets/4.jpg" style="width: auto;height:100vh;" visibility: hidden/>
+      <img src="assets/5.jpg" style="width: auto;height:100vh;" visibility: hidden/>
+      <img src="assets/6.jpg" style="width: auto;height:100vh;" visibility: hidden/>
+      <img src="assets/7.jpg" style="width: auto;height:100vh;" visibility: hidden/>
+      <img src="assets/8.jpg" style="width: auto;height:100vh;" visibility: hidden/>
+      <img src="assets/9.jpg" style="width: auto;height:100vh;" visibility: hidden/>
+      <img src="assets/10.jpg" style="width: auto;height:100vh;" visibility: hidden/>
+      <img src="assets/11.jpg" style="width: auto;height:100vh;" visibility: hidden/>
+  </div>
+
+
+
+</html>
